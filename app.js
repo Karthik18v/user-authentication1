@@ -26,6 +26,10 @@ const initializeDbAndServer = async () => {
   }
 };
 
+app.get("/hello", async (req, res) => {
+  res.send("Hello");
+});
+
 app.post("/register", async (req, res) => {
   const { userName, email, password } = req.body;
 
